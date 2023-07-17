@@ -1,4 +1,0 @@
-SELECT CustomerName, SUM(Quantity * Price) AS Total
-FROM Customers JOIN Orders JOIN OrderDetails JOIN Products
-ON (Customers.CustomerID = Orders.CustomerID) AND Orders.OrderID = OrderDetails.OrderID AND (OrderDetails.ProductID = Products.ProductID)
-GROUP BY CustomerName;
